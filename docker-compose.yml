@@ -1,0 +1,11 @@
+version: "3"
+services:
+  prest:
+    build: .
+    env_file:
+      - .env
+    ports:
+      - 8081:8081
+    volumes:
+      - "./middlewares_src/:/app/lib/src/middlewares/"
+      - "./middlewares_so/:/app/lib/middlewares/"
